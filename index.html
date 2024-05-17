@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Since</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,33 +11,54 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
             margin: 0;
         }
-        .counter {
+        .container {
             text-align: center;
-            background-color: #ffffff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .counter h1 {
-            font-size: 2em;
-            margin: 0;
+        .bubble-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
         }
-        .counter p {
-            font-size: 1.2em;
-            color: #666;
+        .bubble {
+            position: relative;
+            margin: 10px;
+            line-height: 60px;
+            font-size: 18px;
+        }
+        .bubble-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #f0f8ff;
+            border: 2px solid #93acfa;
+        }
+        .label {
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="counter">
-        <h1 id="days-since">0</h1>
+    <div class="container">
+        <div class="bubble-container">
+            <div class="bubble">
+                <div class="bubble-number" id="year-number">0</div>
+                <div class="label">years</div>
+            </div>
+            <div class="bubble">
+                <div class="bubble-number" id="month-number">0</div>
+                <div class="label">months</div>
+            </div>
+            <div class="bubble">
+                <div class="bubble-number" id="days-number">0</div>
+                <div class="label">days</div>
+            </div>
+        </div>
     </div>
-
-    <script src="daycounter.js">
-    </script>
+    <script src="daycounter.js"></script>
 </body>
 </html>

@@ -19,5 +19,7 @@ function calculateTimeSince(startDate) {
     return { years, months, days };
 }
 
-const timeSince = calculateTimeSince('2024-01-01');
-document.getElementById('days-since').innerText = `${timeSince.years} year${timeSince.years !== 1 ? 's' : ''}, ${timeSince.months} month${timeSince.months !== 1 ? 's' : ''}, and ${timeSince.days} day${timeSince.days !== 1 ? 's' : ''}`;
+const { years, months, days } = calculateTimeSince('2015-05-26');
+document.getElementById('year-number').innerText = years
+document.getElementById('month-number').innerText = months
+document.getElementById('day-number').innerText = days
